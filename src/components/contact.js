@@ -1,9 +1,12 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import Modal from "./modal";
+
 const Contact = () => {
 
     return(
         <div>
+            <Modal />
             <div className="ui raised very padded text container segment" style={{marginTop: '80px'}}>
                 <Link to='/card/alex' className="ui header">Alex</Link>
                 <p>ffftftfu ftftfu, yfyufuyfyffu</p>
