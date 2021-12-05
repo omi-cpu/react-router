@@ -1,20 +1,20 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import Contact from "./components/contact";
 import About from "./components/about";
+import Card from "./components/card";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        <Routes>
-          <Route exact path='/' element={<Home/>} />
-          <Route path='/about' element={<About/>} />
-          <Route path='/contact' element={<Contact/>} />
-        </Routes>
+          <Route exact path='/' component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/:user' component={Card} />
       </div>
     </BrowserRouter>
   );
